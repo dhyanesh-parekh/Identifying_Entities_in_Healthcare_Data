@@ -16,12 +16,12 @@ Suppose you have been given such a data set in which a lot of text is written re
 <!-- You can include any other section that is pertinent to your problem -->
 
 ## General Information
-- Business Problem
+### Business Problem
   - **BeHealthy** has a web platform that allows doctors to list their services and manage patient interactions and provides services for patients such as booking interactions with doctors and ordering medicines online. Here, doctors can easily organise appointments, track past medical records and provide e-prescriptions. Suppose you have been given such a data set in which a lot of text is written related to the medical domain, you can build an algorithm to map the diseases and their respective treatment, to determine the disease name and its probable treatment from the dataset and list it out in the form of a table or a dictionary
-  - **Concept identification:** 
-        After preprocessing, we will first explore what are the various concepts present in the dataset. For this task, we will use PoS tagging. It is good to identify all the words from the corpus that have a tag of NOUN or PROPN (nouns) and prepare a dictionary of their counts. We will then output the top 25 most frequently discussed concepts in the entire corpus.An important point to note here is that we are using both test and train sentences for concept identification. This is an exploratory analysis on the complete data. In this step, you need to perform the following two tasks by considering the train and the test dataset as a single unit of data:Use a toolkit like spaCy to extract those tokens that have NOUN or PROPN as their PoS tag and find their frequency from the entire dataset that comprises both the train and the test datasets.Print the top 25 most common tokens with NOUN or PROPN PoS tags for the entire dataset that comprises both the train and the test datasets.
-  - **Defining the features for CRF:** 
-    Here, you need to perform the following three steps:
+### Concept identification:
+  - After preprocessing, we will first explore what are the various concepts present in the dataset. For this task, we will use PoS tagging. It is good to identify all the words from the corpus that have a tag of NOUN or PROPN (nouns) and prepare a dictionary of their counts. We will then output the top 25 most frequently discussed concepts in the entire corpus.An important point to note here is that we are using both test and train sentences for concept identification. This is an exploratory analysis on the complete data. In this step, you need to perform the following two tasks by considering the train and the test dataset as a single unit of data:Use a toolkit like spaCy to extract those tokens that have NOUN or PROPN as their PoS tag and find their frequency from the entire dataset that comprises both the train and the test datasets.Print the top 25 most common tokens with NOUN or PROPN PoS tags for the entire dataset that comprises both the train and the test datasets.
+### Defining the features for CRF:
+  - Here, you need to perform the following three steps:
     - Define the features with the PoS tag as one of the features.
     - While defining the features in which you have used the PoS tags, you also need to consider the preceding word of the current word. The    use of the information of the preceding word makes the CRF model more accurate and exhaustive.
     - Mark the beginning and the end words of a sentence correctly in the form of features.
@@ -49,7 +49,8 @@ Suppose you have been given such a data set in which a lot of text is written re
 - Matplotlib - version 3.7.1
 - Seaborne - version 0.12.2
 - Scikit-learn - version 1.2.2
-- Statsmodels - version 0.14.0
+- sklearn-crfsuite - version 0.3.6
+- Spacy - Version: 3.7.4
 
 
 <!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
